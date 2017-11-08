@@ -1,11 +1,10 @@
 package ro.oss.niinoo.domain.model;
 
-import ro.oss.niinoo.domain.model.base.Attribute;
 import ro.oss.niinoo.domain.model.base.Entity;
 
 import java.util.Collection;
 
-public class Account extends Entity {
+public class Account extends Entity<AccountAttribute> {
 
     private Long accountId;
 
@@ -23,7 +22,10 @@ public class Account extends Entity {
         return attributes;
     }
 
-    public void setAttributes(Collection<? extends Attribute> attributes) {
-        this.attributes = (Collection<AccountAttribute>) attributes;
+    @Override
+    public void setAttributes(Collection<AccountAttribute> attributes) {
+        this.attributes = attributes;
     }
+
+
 }

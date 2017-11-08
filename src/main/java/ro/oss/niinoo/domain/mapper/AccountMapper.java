@@ -16,8 +16,10 @@ package ro.oss.niinoo.domain.mapper;/*
  */
 
 import org.mapstruct.Mapper;
+import ro.oss.niinoo.domain.dto.AccountAttributeDTO;
 import ro.oss.niinoo.domain.dto.AccountDTO;
 import ro.oss.niinoo.domain.model.Account;
+import ro.oss.niinoo.domain.model.AccountAttribute;
 
 @Mapper
 public interface AccountMapper {
@@ -26,6 +28,6 @@ public interface AccountMapper {
 
     Account dto2entity(AccountDTO dto);
 
-
+    AccountAttribute map(AccountAttributeDTO dto);
 
 }
